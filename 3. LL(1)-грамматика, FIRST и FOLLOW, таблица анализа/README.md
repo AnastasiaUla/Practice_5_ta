@@ -2,8 +2,6 @@
 
 **Файл модели:** [`grammar_ll1.jff`](grammar_ll1.jff).
 
-![Грамматика в JFLAP](images/ll1_grammar.png)
-
 ## Правила грамматики
 
 ```text
@@ -35,8 +33,6 @@ L -> 0L | 1L | ε
 | `F` | `( 0 1 a`–`j` | `$ & ) + ^` |
 | `K` | `0 1` | `$ & ) + ^` |
 | `L` | `0 1 ε` | `$ & ) + ^` |
-
-![FIRST и FOLLOW в JFLAP](images/ll1_first_follow.png)
 
 ## Таблица предсказывающего анализа M[A, a]
 
