@@ -77,8 +77,20 @@ class Parser:
 
     # P -> E R
     def program(self):
+        if self.cur != "ID":
+            raise SyntaxErr()
+        self.eat("ID")
+        self.eat("=")
         self.expression()
-        self.rest()
+
+        while self.cur == ";":
+            self.eat(";")
+            if self.cur != "ID":
+                raise SyntaxErr()
+            self.eat("ID")
+            self.eat("=")
+            self.expression()
+
         self.eat("$")
 
     # R -> ; E R | ε
