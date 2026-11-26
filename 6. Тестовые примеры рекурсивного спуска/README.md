@@ -1,7 +1,7 @@
 # Метод рекурсивного спуска
 
 **Код:** [`recursive_descent.py`](recursive_descent.py) 
-**Тесты:** [`run_tests.py`](run_tests.py).
+
 
 ## Результаты (14 цепочек)
 
@@ -24,5 +24,5 @@
 
 ## Вывод программы
 
-![Результаты run_tests.py](rd_tests.png)
+![Результаты](rd_tests.png)
 
