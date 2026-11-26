@@ -22,6 +22,7 @@
 | 13 | `a=1+` | Rejected | нет операнда |
 | 14 | `a=(b` | Rejected | нет закрывающей скобки |
 
-![Результаты run_tests.py](images/rd_tests.png)
+## Вывод программы
 
-![Запуск с аргументом -e](images/rd_cli.png)
+![Результаты run_tests.py](rd_tests.png)
+
