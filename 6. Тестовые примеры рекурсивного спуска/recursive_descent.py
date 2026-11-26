@@ -163,6 +163,31 @@ def check(text):
         return "Rejected"
 
 
+# Тестовые цепочки
+tests = [
+    "a=101",
+    "ab=0b1011+7",
+    "x=0t1202&y;z=~x",
+    "a=b=c",
+    "a=(b=c)^1",
+    "ab=~(cd+0b1)&~~5",
+    "a=1;b=2;c=a+b",
+    "a=0b102",
+    "a=0t3",
+    "abc=1",
+    "a=1;",
+    "a+b=c",
+    "a=1+",
+    "a=(b",
+]
+
+
+def run_tests():
+    print("Результаты распознавания методом рекурсивного спуска:\n")
+    for i, word in enumerate(tests, start=1):
+        print(f"{str(i) + '.':<4}{word:20} - {check(word)}")
+
+
 def main():
     args = sys.argv[1:]
     if len(args) >= 2 and args[0] == "-e":
@@ -171,7 +196,7 @@ def main():
         with open(args[0], encoding="utf-8") as f:
             print(check(f.read()))
     else:
-        print(check(sys.stdin.read()))
+        run_tests()
 
 
 if __name__ == "__main__":
